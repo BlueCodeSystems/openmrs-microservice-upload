@@ -7,3 +7,7 @@ services:
     environment:
       PORT: 8089
       EDI_DIR: "./EDI"
+    volumes: 
+      - edi-images:./EDI
+volumes: 
+  edi-images:
