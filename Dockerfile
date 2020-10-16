@@ -16,5 +16,5 @@ RUN npm install
 COPY . .
 
 EXPOSE 8089
-CMD [ "npm", "run","build" ]
+RUN npm run build
 CMD [ "npm", "start" ]
