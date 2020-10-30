@@ -6,8 +6,8 @@ services:
         - 8089:8089
     environment:
       PORT: 8089
-      EDI_DIR: "./EDI"
+      EDI_DIR: "/usr/src/openmrs-microservice-upload/EDI"
     volumes: 
-      - edi-images:./EDI
+      - edi-images:/usr/src/openmrs-microservice-upload/EDI
 volumes: 
   edi-images:
