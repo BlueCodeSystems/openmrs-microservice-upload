@@ -6,7 +6,10 @@ services:
     ports:
         - 8089:8089
     environment:
-      PORT: 8089
-      EDI_DIR: "./EDI"
+      PORT: $PORT
+      EDI_DIR: $EDI_DIR
+    network_mode: host
     volumes:
-            - /usr/share/smartcerv/EDI:$EDI_DIR
+      - edi:$EDI_DIR
+volumes:
+  edi:

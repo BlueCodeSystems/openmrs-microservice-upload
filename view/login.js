@@ -20,7 +20,7 @@ import Upload from "./upload";
       
       let token;
       try{
-         let result = await axios.get("/session", {auth:{ username:state.username, password:state.password}});
+         let result = await axios.get("https://smartcerv.bluecodeltd.com/middleware/rest/session", {auth:{ username:state.username, password:state.password}});
          token = result.data.token;
          let facilityId = result.data.user.location[0]["location_id"];
 
