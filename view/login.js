@@ -38,7 +38,7 @@ import Upload from "./upload";
     <div className="card">
           <h3>Enter your Smartcerv credentials</h3>
           <InputText placeholder="Username" className="inputs"  onChange={(e) => emitUsername(e.target.value)}/>
-          <Password  className="inputs"  onChange={(e) => emitPassword(e.target.value)} />      
+          <Password  className="inputs" feedback="false" onChange={(e) => emitPassword(e.target.value)} />      
           <Button  className="inputs" label="Login" onClick={submit}/>
           {(state.incorrectCredentials)?<p className="login-error-messege">Username or password is incorrect</p>:<span></span>}
     </div>

@@ -1,8 +1,9 @@
 import moment from "moment";
 import fs from "fs";
+
 function uploadFiles(req, res) {
         
-    const EDI_DIR = process.env.ROOT_DIR || '/usr/src/openmrs-microservice-upload/EDI';
+    const EDI_DIR = process.env.EDI_DIR || '/usr/src/openmrs-microservice-upload/EDI';
     if (!req.files || Object.keys(req.files).length === 0) {
         return res.status(400);
     }
