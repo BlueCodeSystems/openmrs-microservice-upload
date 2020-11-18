@@ -11,7 +11,7 @@ function uploadFiles(req, res) {
     let name = Object.keys(req.files)[0]
     let files = req.files[name];
 
-    const dir = `${EDI_DIR}/${name}/${moment.now().toString()}`
+    const dir = `${EDI_DIR}/${name}/${(new Date.valueOf()).toString()}`
 
     fs.mkdirSync(dir, { recursive: true });
 
