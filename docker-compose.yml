@@ -8,7 +8,6 @@ services:
     environment:
       PORT: $PORT
       EDI_DIR: $EDI_DIR
-    network_mode: host
     volumes:
       - edi:$EDI_DIR
 volumes:
